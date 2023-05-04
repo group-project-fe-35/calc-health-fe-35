@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+/* Reset CSS */
+/*
+  set semua sizing box menjadi border box.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. manghapus margin bawaan
+*/
+* {
+  margin: 0;
+}
+/*
+  3. set tinggi persentasi
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic
+  4. menambah line heiht
+  5. render text
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. membuat media memiliki display block
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. hapus style bawaan
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* end reset css */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-item {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.login{
+  padding: 4px 15px !important;
+  border: 1px solid #36CFC9;
+  border-radius: 10px;
+  filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.016));
+  background-color: #fff;
+  transition: all .15s ease-in;
+  font-size: 14px;
+  text-align: center;
+  color: #36CFC9;
+}
+
+.register {
+  padding: 4px 15px !important;
+  background-color: #36CFC9;
+  border: 1px solid #36CFC9;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 10px;
+  transition: all .15s ease-in;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.register:hover {
+  background-color: #119692;
+  border: 1px solid #119692
+}
+
+.login:hover {
+  border: 1px solid #36CFC9;
+  background-color: #36CFC9;
+}
+
+.hero {
+  padding: 4rem 1rem;
+}
+
+.hero-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #006D75;
+  margin-bottom: 10px;
+}
+
+.hero-content h3{
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #36CFC9;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.hero-content p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify;
+  color: #6D6D6D;
+  margin-bottom: 10px;
+}
+
+.hero-content .get-started{
+  padding: .5em 2.6em;
+  margin-top: 20px;
+  border: 1px solid #36CFC9;
+  background-color: #36CFC9;
+  transition: all .15s ease-in;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.hero-content .get-started:hover{
+  background-color: #119692;
+}
+
+.our-features {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 46px;
+  align-items: center;
+  color: #006D75;
+}
+
+.content-container .image{
+  padding: 4rem 2rem;
+}
+
+.content-container .image img{
+  width: 150px;
+  height: 150px;
+}
+
+.content-container .content{
+  gap: 18px;
+  padding: 5rem 2rem;
+}
+
+.content-container .content h3{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  line-height: 49px;
+  color: #40514E;
+}
+
+.content-container .content p{
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+  color: #6D6D6D;
+  text-align: justify;
+}
+
+.content-container .content button{
+  width: 40%;
+  padding: .3em 1.3em;
+  border: 1px solid #36CFC9;
+  background-color: #36CFC9;
+  transition: all .15s ease-in;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.content-container .content button:hover{
+  background-color: #119692;
+}
+
+footer{
+  color: white;
+  background-color: #40514E;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3em 5em;
+}
+
+footer .footer-container .brand {
+  width: 20%;
+}
+
+footer .footer-container .brand img {
+  width: 108px;
+  height: 80px;
+}
+
+footer .footer-container .brand p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 120%;
+  color: #13C2C2;
+}
+
+footer .footer-container .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+footer .footer-container .item h5 {
+  font-family: 'Nunito', sans-serif;
+  color:#E3E3E3;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 33px;
+}
+
+footer .footer-container .item ul {
+  font-family: 'Nunito', sans-serif;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+footer .footer-container .item a {
+  text-decoration: none;
+  color:#E3E3E3;
+  line-height: 22px;
+  font-size: 1em;
+}
+
+footer .footer-container .item a:hover {
+  color:#8a8a8a;
+}
+
+footer .footer-container .partner h5{
+  font-family: 'Nunito', sans-serif;
+  color:#E3E3E3;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 33px;
+}
+
+footer .footer-container .partner .image-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-container .partner .image-partner .danone{
+  width: 86px;
+  height: 120px;
+}
+footer .footer-container .partner .image-partner .skilvul{
+  width: 162px;
+  height: 76px;
+}
+
+hr.line-footer {
+  background-color: #636363;
+  height: 1px;
+  border: none;
+}
+
+footer .copyright {
+  padding: 1em 4.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .copyright p{
+  font-size: 14px;
+  color:#E3E3E3;
+  line-height: 21px;
+}
+
+footer .copyright .social-media {
+  display: flex;
+  gap: 15px;
+}
+
+footer .copyright .social-media img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer-container .brand {
+    width: 50%;
+  }
+  footer .footer-container .partner .image-partner {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .copyright {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
