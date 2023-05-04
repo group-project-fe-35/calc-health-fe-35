@@ -107,3 +107,135 @@ body {
   border: 1px solid #36CFC9;
   background-color: #36CFC9;
 }
+
+footer{
+    color: white;
+    background-color: #40514E;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 5em;
+  }
+  
+  footer .footer-container .brand {
+    width: 20%;
+  }
+  
+  footer .footer-container .brand img {
+    width: 108px;
+    height: 80px;
+  }
+  
+  footer .footer-container .brand p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 120%;
+    color: #13C2C2;
+  }
+  
+  footer .footer-container .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  footer .footer-container .item h5 {
+    font-family: 'Nunito', sans-serif;
+    color:#E3E3E3;
+    font-weight: 700;
+    font-size: 1.3em;
+    line-height: 33px;
+  }
+  
+  footer .footer-container .item ul {
+    font-family: 'Nunito', sans-serif;
+    padding-inline-start: 0;
+    list-style: none;
+  }
+  
+  footer .footer-container .item a {
+    text-decoration: none;
+    color:#E3E3E3;
+    line-height: 22px;
+    font-size: 1em;
+  }
+  
+  footer .footer-container .item a:hover {
+    color:#8a8a8a;
+  }
+  
+  footer .footer-container .partner h5{
+    font-family: 'Nunito', sans-serif;
+    color:#E3E3E3;
+    font-weight: 700;
+    font-size: 1.3em;
+    line-height: 33px;
+  }
+  
+  footer .footer-container .partner .image-partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .footer-container .partner .image-partner .danone{
+    width: 86px;
+    height: 120px;
+  }
+  footer .footer-container .partner .image-partner .skilvul{
+    width: 162px;
+    height: 76px;
+  }
+  
+  hr.line-footer {
+    background-color: #636363;
+    height: 1px;
+    border: none;
+  }
+  
+  footer .copyright {
+    padding: 1em 4.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer .copyright p{
+    font-size: 14px;
+    color:#E3E3E3;
+    line-height: 21px;
+  }
+  
+  footer .copyright .social-media {
+    display: flex;
+    gap: 15px;
+  }
+  
+  footer .copyright .social-media img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    footer .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    footer .footer-container .brand {
+      width: 50%;
+    }
+    footer .footer-container .partner .image-partner {
+      display: flex;
+      flex-direction: column;
+    }
+    footer .copyright {
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
