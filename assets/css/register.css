@@ -108,6 +108,62 @@ body {
   background-color: #36CFC9;
 }
 
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #006D75;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    padding: 30px 40px;
+    margin: 10px 350px;
+    margin-bottom: 100px;
+}
+
+.form{
+    margin-top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    color: #11999E;
+}
+
+.check{
+    margin-top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+#btn-daftar{
+    text-decoration: none;
+}
+
+#daftar{
+    font-family: 'Poppins';
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    background: #36CFC9;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 10px;
+    width: 230px;
+    margin: auto 130px;
+}
+
+#login{
+    margin-top: 15px;
+    text-align: center;
+}
+
 footer{
     color: white;
     background-color: #40514E;
