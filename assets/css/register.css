@@ -159,6 +159,10 @@ form{
     margin: auto auto;
 }
 
+#daftar:hover{
+    background-color: #119692;
+}
+
 #login{
     margin-top: 15px;
     text-align: center;
