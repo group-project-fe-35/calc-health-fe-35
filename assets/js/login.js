@@ -3,7 +3,7 @@ function validateForm() {
     var password = document.getElementById("password").value;
   
     if (email.trim() == "" || password.trim() == "") {
-      alert("Username and password are required");
+      alert("Email and password are required");
       return false;
     }
   
@@ -38,7 +38,7 @@ function validateForm() {
               window.location.href = "index.html"; // redirect ke halaman index.html
             } else {
               // jika tidak, login gagal
-              alert("Invalid username or password");
+              alert("Invalid email or password");
             }
           })
           .catch((error) => {
