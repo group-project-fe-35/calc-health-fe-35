@@ -108,16 +108,18 @@ body {
   background-color: #36CFC9;
 }
 
-.img-fluid {
-    position: absolute;
-    width: 1100px;
+.container{
+  margin: 0;
+}
+
+.img{
+    width: 500px;
     height: 100%;
-    left: -2px;
-    top: 46px;
+    margin-right: 200px;
 }
 
 .logo-form{
-    margin-left: 40%;
+    margin-left: 36%;
     margin-bottom: 30px;
 }
 
@@ -143,7 +145,7 @@ body {
 	height: 110vh;
 	background: white;
 	border-radius: 10px;
-	margin-left: 30px;
+	margin-left: 30%;
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 10px;
@@ -329,15 +331,13 @@ footer{
       display: flex;
       flex-direction: column;
     }
-  }
 
-  @media (max-width: 800px) {
-    .img-fluid {
-      position: absolute;
-      width: 1100px;
-      height: 800px;
-      left: -2px;
-      top: 46px;
-      z-index:-5;
-    } 
+    .frm-login #form-login {
+      margin-left: 0;
+    }
+
+    .img{
+      width: 250px;
+      margin-left: 150px;
+    }
   }
