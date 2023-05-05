@@ -19,7 +19,7 @@ const resultCalculateBMI = () => {
     BMICategory = 'Underweight';
     descriptionCategory =
       'Wahh berat badan kamu sudah dibawah batas berat normal nih sobat!! Sekarang kamu harus mulai mengatur pola makanan nih. Biar berat badan kamu cepat naik kamu perlu menambah konsumsi kalori 2800-3000 per harinya nih sobat. Makan yang lebih banyak ya sobat!! ';
-      imageStatus = '<img src="./assets/images/underweight.png" alt="" width="140" height="240">';
+    imageStatus = '<img src="./assets/images/underweight.png" alt="" width="140" height="240">';
   }
   if (results >= 18.5 && results <= 24.9) {
     BMICategory = 'Normal';
@@ -36,7 +36,7 @@ const resultCalculateBMI = () => {
     BMICategory = 'Obesity';
     descriptionCategory =
       'Berat badan kamu sudah masuk ke kategory Obesitas sobat!! Sekarang kamu harus mulai mengatur pola makanan dan juga olah raga agar kamu dapat membakar kalori. Biar berat badan kamu cepat turun kamu perlu konsumsi kalori 1100-1600 per harinya nih sobat. Jangan sampai kelebihan kalori yaa ';
-      imageStatus = '<img src="./assets/images/obesity.png" alt="" width="140" height="240">';
+    imageStatus = '<img src="./assets/images/obesity.png" alt="" width="140" height="240">';
   }
   form.reset();
   result.innerHTML = `<section class=" container result-score col-lg-2 text-center col-sm-12">
@@ -58,3 +58,5 @@ const resultCalculateBMI = () => {
 
   return BMICategory;
 };
+
+export { resultCalculateBMI };
