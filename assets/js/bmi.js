@@ -71,11 +71,12 @@ const resultCalculateBMI = () => {
                             <p class="description-category" id="ddescription-category">
                               ${descriptionCategory}
                             </p>
-                            <a href="./../../plan-meal.html"><button type="submit" class="get-calc" id="search-meal-plan">Ceri meal plan</button></a>
+                            <a href="./../../plan-meal.html"><button type="submit" class="get-calc" id="search-meal-plan">Cari meal plan</button></a>
                           </div>
                       </section>`;
   const dataCategory = {
-    category: BMICategory
+    category: BMICategory,
+    calories: kebutuhanKalori
   }
   saveCategory(dataCategory);
   return BMICategory;
