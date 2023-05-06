@@ -10,7 +10,13 @@ const putActiveUser = (data) => {
 const getActiveUser = () => {
   return JSON.parse(localStorage.getItem('activeUser'));
 };
+const saveCategory = (data) => {
+  localStorage.setItem('categoryBMI', JSON.stringify(data))
+}
+const getCategory = () => {
+  return JSON.parse(localStorage.getItem('categoryBMI'))
 
+}
 const getPlanMeal = async () => {
   const url = 'https://64549a54a74f994b334434f8.mockapi.io/api/v1/planmeal'
   const data = await fetch(url)
@@ -29,5 +35,7 @@ export {
   getFromLocalStorage,
   putActiveUser,
   getActiveUser,
-  getPlanMeal
+  getPlanMeal,
+  saveCategory,
+  getCategory
 };
