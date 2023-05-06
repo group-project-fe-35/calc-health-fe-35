@@ -1,4 +1,4 @@
-import {putToLocalStorage, getFromLocalStorage} from './service.js'
+import {putToLocalStorage} from './service.js'
 
 const btn_daftar = document.getElementById('daftar')
 
@@ -16,7 +16,7 @@ const handleData = () => {
             email: null,
             password: null,
             konfirmasiPassword: null,
-            check: false
+            check
         }
     }
     return { namaBelakang, namaDepan, email, password, konfirmasiPassword, check }
@@ -26,19 +26,16 @@ const isPasswordMatch = (data) => {
     return data.password === data.konfirmasiPassword ? true : false;
 };
 
-const validateFormData = (data) => {
-    if (data.namaDepan == null && data.namaBelakang == null && data.email == null && data.password == null && data.konfirmasiPassword == null && check == false) {
-        return false
-    }
-    return true
-}
+
 
 const handleRegister = (data) => {
-    if (!validateFormData(handleData())) {
+    if (data.namaDepan == null || data.namaBelakang == null || data.email == null || data.password == null || data.konfirmasiPassword == null || check == false) {
         alert ('isi semua field')
+        return
     }
     if (!isPasswordMatch(handleData())) {
-        return alert('password do not match')
+        alert('password do not match')
+        return 
     }
     const user = {
         nama: data.namaDepan,
@@ -48,8 +45,8 @@ const handleRegister = (data) => {
     console.log(user)
     putToLocalStorage(user)
     alert('You are Registered, Click OK to login')
-        window.location.href = '../../login.html'
-        form.reset
+    window.location.href = '../../login.html'
+    form.reset
 }
 
 btn_daftar.addEventListener('click', (event) => {
