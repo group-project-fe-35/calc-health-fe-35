@@ -11,31 +11,73 @@ const getActiveUser = () => {
   return JSON.parse(localStorage.getItem('activeUser'));
 };
 const saveCategory = (data) => {
-  localStorage.setItem('categoryBMI', JSON.stringify(data))
-}
+  localStorage.setItem('categoryBMI', JSON.stringify(data));
+};
 const getCategory = () => {
-  return JSON.parse(localStorage.getItem('categoryBMI'))
+  return JSON.parse(localStorage.getItem('categoryBMI'));
+};
 
-}
-const getPlanMeal = async () => {
-  const url = 'https://64549a54a74f994b334434f8.mockapi.io/api/v1/planmeal'
+const setFavoriteFoods = (id, list) => {
+  localStorage.setItem('favorite', JSON.stringify(list));
+  alert('added food success');
+};
+const getUserFavorite = () => {
+  return localStorage.getItem('favorite');
+};
+
+const BASE_URL = 'https://api.spoonacular.com/recipes';
+const API_KEY = '58a9a64591d0452c9e40d766f72572e9';
+const INC_NUTRITION = 'includeNutrition=true';
+
+const getListFoodsAPI = async (number = 15) => {
+  const url = `${BASE_URL}/complexSearch?apiKey=${API_KEY}&number=${number}`;
+
   const data = await fetch(url)
-    .then((response) => response.json())
-    .then((response) => {
-      return response
+    .then((res) => res.json())
+    .then((res) => {
+      return res.results;
     })
-    .catch((err) => {throw new Error(err)})
-    return data
-}
+    .catch((err) => {
+      throw new Error(err);
+    });
 
-getPlanMeal()
+  return data;
+};
+const getFoodInformation = async (id = '716381') => {
+  const url = `${BASE_URL}/${id}/information?apiKey=${API_KEY}&${INC_NUTRITION}`;
+  const data = await fetch(url)
+    .then((res) => res.json())
+    .then((res) => {
+      return res;
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
+  return data;
+};
+const getFoodDetailByID = async (id = '716381') => {
+  const url = `${BASE_URL}/${id}/nutritionWidget.json?apiKey=${API_KEY}`;
+  const data = await fetch(url)
+    .then((res) => res.json())
+    .then((res) => {
+      return res;
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
+  return data;
+};
 
 export {
   putToLocalStorage,
   getFromLocalStorage,
   putActiveUser,
   getActiveUser,
-  getPlanMeal,
   saveCategory,
-  getCategory
+  getCategory,
+  getListFoodsAPI,
+  getFoodDetailByID,
+  getFoodInformation,
+  setFavoriteFoods,
+  getUserFavorite,
 };

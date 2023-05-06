@@ -3,25 +3,13 @@
   font-size: 1rem;
 }
 
-.time-meal {
-  color: #11999E;
-  font-size: 1.2rem;
-  font-weight: 800;
+.card-food {
+  border: 1px solid #4FD5D0 !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.list-menu {
-  border: 1px solid #11999E;
-  border-radius: 14px;
-  padding: 1em 0.6em;
-}
-
-.list-menu ul {
-  margin-bottom: 0;
-}
-
-.list-menu ul li {
-  color: #40514E;
-  font-weight: 500;
+.card-footer {
+  border: none !important;
 }
 
 .calori {
