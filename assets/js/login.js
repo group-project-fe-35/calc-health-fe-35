@@ -17,7 +17,7 @@ const handleLogin = () => {
   }
 
   if (user.email === userdata.email && user.password === userdata.password) {
-    putActiveUser(user.email)
+    putActiveUser({nama: userdata.nama, email: user.email})
     alert('You are login seccess, click ok for continue')
     window.location.href = './../../home-page.html'
     return true
