@@ -26,10 +26,10 @@ const getUserFavorite = () => {
 };
 
 const BASE_URL = 'https://api.spoonacular.com/recipes';
-const API_KEY = '58a9a64591d0452c9e40d766f72572e9';
+const API_KEY = 'ec89dc683ab14060aec05d34eff4958f';
 const INC_NUTRITION = 'includeNutrition=true';
 
-const getListFoodsAPI = async (number = 15) => {
+const getListFoodsAPI = async (number = 60) => {
   const url = `${BASE_URL}/complexSearch?apiKey=${API_KEY}&number=${number}`;
 
   const data = await fetch(url)
